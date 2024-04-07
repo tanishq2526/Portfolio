@@ -7,14 +7,104 @@
 body {
     font-family: "Montserrat", sans-serif;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: column;
     color: #1d3557;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
+    position: relative;
+    overflow: hidden;
+    animation: bgcolor 60s infinite 3s ease-in-out;
 }
+
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #003298;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 12s ease-in forwards infinite;
+            animation: cube 12s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: #E76688;
+  }
+  .cube:nth-child(2) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+            border-color: #6FE766;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+            border-color: #669CE7;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  
+  @-webkit-keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes bgcolor {
+    0%{
+        background-image: linear-gradient(to right, #fbadc2 , #ccf9c9 , #bfd7f8);
+    }
+    25%{
+        background-image: linear-gradient(to right, #ccf9c9 , #bfd7f8,#fbadc2);
+    }
+    50%{
+        background-image: linear-gradient(to right , #bfd7f8,#fbadc2, #ccf9c9);
+    }
+    75%{
+        background-image: linear-gradient(to right ,#fbadc2, #ccf9c9, #bfd7f8);
+    }
+    100%{
+        background-image: linear-gradient(to right ,#e3b4c0, #b4ddb1, #aac2e3);
+    }
+  }
 
 main{
     width: 100%;
@@ -64,7 +154,7 @@ main{
 .text p{
     display: flex;
     align-items: center;
-    color: gray;
+    color: white;
     font-size: large;
 }
 
@@ -133,6 +223,8 @@ main{
     color: #669CE7;
 }
 
+
+
 @media only screen and (max-width: 500px) {
     body{
         display: flex;
@@ -184,7 +276,7 @@ main{
     }
 
     .text p{
-        font-size: 20px;
+        font-size: 18px;
         color: gray;
     }
 
