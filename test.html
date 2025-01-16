@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Heading Example</title>
+</head>
+<body>
+
+    <ul>
+        <li id="Blog">Blog</li>
+    </ul>
+    <h1 id="heading">Welcome to My Blog</h1>
+
+    <script>
+        // Get the element with ID "Blog"
+        const blogElement = document.getElementById('Blog');
+
+        // Get the heading element
+        const headingElement = document.getElementById('heading');
+
+        // Add a click event listener to the blog element
+        blogElement.addEventListener('click', function() {
+            // Change the text of the heading to "Coming soon"
+            headingElement.textContent = 'Coming soon';
+        });
+    </script>
+
+</body>
+</html>

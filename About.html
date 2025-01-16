@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <script src="script.js"></script>
+
+</head>
+
+<body>
+    <audio id="player" autoplay loop>
+        <source src="/mingle_squid_game.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="cards-container">
+        <div class="social-card">
+            <section class="profile-pic">
+                <img src="/avtar.png" alt="profile-pic">
+            </section>
+            <section class="social-accounts">
+                <code><center>Tanishq soni</center></code>
+                <ul>
+                    <a href="mailto:tanishq.25.ts@gmail.com">
+                        <hr color="white">
+                        <li>Email</li>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tanishq-soni-b54b49285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        <li>linked in</li>
+                    </a>
+                    <a href="">
+                        <li>Git</li>
+                    </a>
+                    <a href="">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </section>
+        </div>
+        <div class="professional-card">
+            <div class="professional-card">
+                <!-- Menu-bar -->
+                <div class="menu-container">
+                    <button class="menu-button">
+                        <img src="/5957012_menu_icon.png" alt="Menu Icon" class="menu-icon" height="64px"> Menu
+                    </button>
+                    <ul class="menu-list">
+                        <li><a id="Home" href="index.html" style="color: yellow; border-bottom: 2px yellow solid;">Home</a></li>
+                        <li><a id="About" href="About.html">About</a></li>
+                        <li><a id="Resume" href="Resume.html">Resume</a></li>
+                        <li><a id="Portfolio" href="Portfolio.html">Portfolio</a></li>
+                        <li><a id="Blog" href="Blog.html">Blog</a></li>
+                        <li><a id="Contact" href="Contact.html">Contact</a></li>
+                    </ul>
+                    
+                </div>
+                
+            <nav class="nav-bar">
+                <ul>
+                    <li><a id="Home" href="index.html">Home</a></li>
+                    <li><a id="About" style=" color: yellow; border-bottom: 2px yellow solid;">About</a></li>
+                    <li><a id="Resume" href="Resume.html">Resume</a></li>
+                    <li><a id="Portfolio" href="Portfolio.html">Portfolio</a></li>
+                    <li><a id="Blog" href="Blog.html">Blog</a></li>
+                    <li><a id="Contact" href="">Contact</a></li>
+                </ul>
+                <code class="theme-toggle-btn">THEME</code>
+                <div class="theme-toggle">
+                    <label class="switch">
+                      <input type="checkbox" id="theme-toggle">
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+            </nav>
+            <h1 id="heading"> About me: </h1>
+            <h2>Welcome to my delight space</h2>
+            <p class="about-content">Hii I am Tanishq Soni, I am a dedicated and passionate web developer with a strong commitment to crafting seamless and engaging
+                user experiences. With a solid foundation in modern web technologies, I specialize in designing and
+                building responsive, user-friendly websites that not only meet but exceed client expectations. My
+                expertise spans front-end and back-end development, ensuring comprehensive solutions tailored to unique
+                project needs. <br>
+
+                Fueled by a deep interest in innovation, I strive to stay ahead of the curve by continuously learning
+                and adopting the latest tools and trends in web development. From creating intuitive interfaces to
+                optimizing performance, every project I undertake reflects my dedication to quality and attention to
+                detail. <br>
+
+                I take immense pride in transforming ideas into fully functional digital solutions. For me, web
+                development is not just about coding; it's about solving problems, telling stories, and making a
+                meaningful impact in the online world. <br>
+
+                When I’m not coding, you’ll find me exploring new technologies, engaging with the developer community,
+                or brainstorming creative ways to enhance digital experiences. I am always eager to collaborate and
+                bring ambitious ideas to life. <br>
+            </p>
+        </div>
+    </div>
+
+    <script>
+ const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('change', () => {
+  document.body.dataset.theme = toggle.checked ? 'dark' : 'light';
+});
+
+    </script>
+</body>
+
+</html>
